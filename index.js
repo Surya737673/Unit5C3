@@ -63,7 +63,7 @@ app.post("/user/logout", (req, res) => {
         const parse = JSON.parse(data);
         parse.users = parse.users.map(user => {
             if (user.token === apikey) {
-                 delete user.token;                          // Check This
+                 delete user.token;                          
                 return user;
             } else {
                 return user;
